@@ -45,10 +45,10 @@ export default class Sidebar extends Component {
     _renderMenu() {
         return (
             <Menu primary={true}>
-                <Link to="/home">
+                <Link to="/home" onClick={this.props.onCloseButtonClick}>
                     <Anchor className='active' tag="span" onClick={()=>{}}>Home</Anchor>
                 </Link>
-                <Link to="/about">
+                <Link to="/about"  onClick={this.props.onCloseButtonClick}>
                     <Anchor tag="span" onClick={()=>{}}>About</Anchor>
                 </Link>
             </Menu>
