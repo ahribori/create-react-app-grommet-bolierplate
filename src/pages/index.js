@@ -1,7 +1,9 @@
-import Home from './Home';
-import About from './About';
+import asyncRoute from '../lib/asyncRoute';
+
+const Home = asyncRoute(() => import('./Home'))
+const About = asyncRoute(() => import('./About'))
 
 export {
     Home,
     About
-};
+}
