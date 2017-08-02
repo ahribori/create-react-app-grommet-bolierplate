@@ -7,6 +7,7 @@ import Article from 'grommet/components/Article';
 import Section from 'grommet/components/Section';
 import MenuIcon from 'grommet/components/icons/base/Menu';
 import Sidebar from './Sidebar';
+import routes from './routes';
 
 export default class Layout extends Component {
     constructor(props) {
@@ -62,7 +63,7 @@ export default class Layout extends Component {
                 {this._renderMenuButton()}
                 <Article>
                     <Section>
-                        {/* Contents*/}
+                        {routes}
                     </Section>
                 </Article>
             </Box>

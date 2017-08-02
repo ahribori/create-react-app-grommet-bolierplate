@@ -1,5 +1,7 @@
 import * as config from './config';
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+
 import GrommetSidebar from 'grommet/components/Sidebar';
 import Header from 'grommet/components/Header';
 import Title from 'grommet/components/Title';
@@ -43,22 +45,12 @@ export default class Sidebar extends Component {
     _renderMenu() {
         return (
             <Menu primary={true}>
-                <Anchor href='#'
-                        className='active'>
-                    Menu1
-                </Anchor>
-                <Anchor href='#'>
-                    Menu2
-                </Anchor>
-                <Anchor href='#'>
-                    Menu3
-                </Anchor>
-                <Anchor href='#'>
-                    Menu4
-                </Anchor>
-                <Anchor href='#'>
-                    Menu5
-                </Anchor>
+                <Link to="/home">
+                    <Anchor className='active' tag="span" onClick={()=>{}}>Home</Anchor>
+                </Link>
+                <Link to="/about">
+                    <Anchor tag="span" onClick={()=>{}}>About</Anchor>
+                </Link>
             </Menu>
         );
     }
