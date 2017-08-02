@@ -17,11 +17,18 @@ import CloseIcon from 'grommet/components/icons/base/Close';
 export default class Sidebar extends Component {
     constructor(props) {
         super(props);
+        this._onMenuClick = this._onMenuClick.bind(this);
         this._renderCloseButton = this._renderCloseButton.bind(this);
         this._renderLogo = this._renderLogo.bind(this);
         this._renderTitle = this._renderTitle.bind(this);
         this._renderMenu = this._renderMenu.bind(this);
         this._renderMenuFooter = this._renderMenuFooter.bind(this);
+    }
+
+    _onMenuClick() {
+        if (this.props.responsive === 'single') {
+            this.props.onCloseButtonClick();
+        }
     }
 
     _renderCloseButton() {
@@ -45,10 +52,10 @@ export default class Sidebar extends Component {
     _renderMenu() {
         return (
             <Menu primary={true}>
-                <Link to="/home" onClick={this.props.onCloseButtonClick}>
+                <Link to="/home" onClick={this._onMenuClick}>
                     <Anchor className='active' tag="span" onClick={()=>{}}>Home</Anchor>
                 </Link>
-                <Link to="/about"  onClick={this.props.onCloseButtonClick}>
+                <Link to="/about"  onClick={this._onMenuClick}>
                     <Anchor tag="span" onClick={()=>{}}>About</Anchor>
                 </Link>
             </Menu>
