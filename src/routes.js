@@ -6,7 +6,7 @@ import {
 import {
     Home,
     About
-} from '../pages';
+} from './pages';
 
 export default (
     <div>
