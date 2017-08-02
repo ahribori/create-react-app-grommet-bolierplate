@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import 'grommet/scss/vanilla/index.scss';
+import './style/App.scss';
 import {
     BrowserRouter,
 } from 'react-router-dom';
