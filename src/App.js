@@ -4,6 +4,7 @@ import './style/App.scss';
 import {
     BrowserRouter,
 } from 'react-router-dom';
+import { connect } from 'react-redux';
 import Layout from './pages/layout/Layout';
 
 class App extends Component {
@@ -18,4 +19,14 @@ class App extends Component {
     }
 }
 
-export default App;
+const mapStateToProps = (state) => {
+    return {
+    }
+};
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+    }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
