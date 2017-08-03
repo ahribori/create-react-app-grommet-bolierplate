@@ -4,7 +4,7 @@ import './style/App.scss';
 import {
     BrowserRouter,
 } from 'react-router-dom';
-import Layout from './layout/Layout';
+import Layout from './pages/layout/Layout';
 
 class App extends Component {
     render() {
