@@ -104,5 +104,6 @@
     "node-sass": "^4.5.3",
     "nodemon": "^1.12.1",
     "sass-loader": "^6.0.6"
-  }
+  },
+  "proxy": "http://localhost:8088"
 }

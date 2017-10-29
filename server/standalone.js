@@ -1,10 +1,10 @@
-require('dotenv').config();
 /* =========================================
  Load dependencies
  ============================================*/
 import express from 'express';
 import path from 'path';
 import figlet from 'figlet';
+require('dotenv').config();
 
 /* =========================================
  Load Config.js

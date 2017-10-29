@@ -6,13 +6,15 @@ import helper from './helpers/thunkHelper';
 const FETCH = helper.createThunkTypes('user/FETCH');
 
 // Action creators
-export const fetch = helper.createThunk(FETCH.DEFAULT, {
-    url: '',
-    method: '',
-    headers: {
-        authorization: ''
-    }
-});
+export const fetch = (/* Arguments passed from react component */) => {
+	return helper.createThunk(FETCH.DEFAULT, {
+		url: '',
+		method: '',
+		headers: {
+			authorization: ''
+		}
+	})();
+};
 
 // Initial state
 const initialState = fromJS({
