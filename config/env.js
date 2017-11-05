@@ -3,6 +3,8 @@
 const fs = require('fs');
 const path = require('path');
 const paths = require('./paths');
+const yaml = require('js-yaml');
+const conf = yaml.safeLoad(fs.readFileSync('./_config.yml', 'utf8'));
 
 // Make sure that including paths.js after env.js will read .env variables.
 delete require.cache[require.resolve('./paths')];
@@ -83,6 +85,13 @@ function getClientEnvironment(publicUrl) {
       return env;
     }, {}),
   };
+
+  // _config.yml
+  Object.keys(conf).map((key) => {
+	if (conf[key]) {
+		stringified['process.env'][key] = JSON.stringify(conf[key]);
+	}
+  });
 
   return { raw, stringified };
 }
